@@ -112,7 +112,8 @@ export default {
     },
   },
   head() {
-    return [
+    return {
+      head: [
       { hid: 'og:type', property: 'og:type', content: 'website'},
       { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt Movie App'},
       { hid: 'og:title', property: 'og:title', content: this.theMovie.Title},
@@ -120,6 +121,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: this.theMovie.Poster},
       { hid: 'og:url', property: 'og:url', content: `${process.env.CLIENT_URL}${this.$route.fullPath}`} // movie/tt~~
     ]
+    }
   }
 };
 </script>
